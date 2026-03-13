@@ -51,6 +51,25 @@ We aim for feature releases twice per year, so that new features can be continuo
 
 Bugfix releases are allowed at any time and any frequency.
 
+## Breaking release workflow
+
+Breaking releases introduce changes that are not backwards compatible.
+To prepare such releases, development may temporarily take place in a
+separate branch dedicated to the next major version.
+
+For example, during the preparation of version 3, a branch named
+`v3_develop` existed alongside the regular `develop` branch. This made
+it possible to introduce incompatible changes without affecting the
+current development workflow.
+
+Once the development of the new major version was sufficiently mature,
+the `v3_develop` branch was merged into `develop`. After this merge,
+all further development continued towards the new major version and
+no additional releases for the previous major version were planned.
+
+Breaking changes are often grouped using milestones so that related
+tasks can be tracked and prepared well before the actual release.
+
 ## Umbrella / distribution
 
 - twice per year, following the preCICE feature releases.
